@@ -1,4 +1,4 @@
-# Red Hat Intelligent Process Server Docker image (Kieserver)
+# Red Hat BPM Suite Docker image
 
 * Standard installation of RH BPMS.
 
