@@ -22,17 +22,12 @@ COPY support/repositorio-local-niogit $EAP_HOME/bin/.niogit
 # RUN rm -rf $BPMS_HOME/bin/.niogit/ancine.git && git clone --bare http://192.168.21.46/ancine/sin-bpm.git $BPMS_HOME/bin/.niogit/ancine.git
 USER 1000
 
-RUN $EAP_HOME/bin/add-user.sh -a -r ApplicationRealm -u admin -p admin -ro analyst,admin,user,manager,taskuser,reviewerrole,employeebookingrole,kie-server,rest-all --silent
+RUN $EAP_HOME/bin/add-user.sh -a -r ApplicationRealm -u admin -p ancine1! -ro analyst,admin,user,manager,taskuser,reviewerrole,employeebookingrole,kie-server,rest-all --silent
 RUN $EAP_HOME/bin/add-user.sh -a -r ApplicationRealm -u controllerUser -p "controllerUser1234;" -ro kie-server,rest-all --silent
 COPY support/standalone.xml $EAP_HOME/standalone/configuration/
 
 USER root
-
-RUN chown -R 1000:1000 $EAP_HOME/bin/.niogit $EAP_HOME/standalone/configuration/standalone.xml \
-    && rm -rf ~/.m2/repository
-
-
-USER 1000
+RUN chown -R 1000:1000 $EAP_HOME/bin/.niogit $EAP_HOME/standalone/configuration/standalone.xml 
 
 EXPOSE 8001 8080 9990
 
