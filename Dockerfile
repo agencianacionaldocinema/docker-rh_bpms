@@ -3,7 +3,7 @@ FROM ancine/rh_eap7
 ENV BUSINESS_CENTRAL_DISTRIBUTION_ZIP "jboss-bpmsuite-7.0.0.Beta01-business-central-eap7.zip" 
 ENV KIE_EXECUTION_SERVER_ZIP jboss-brms-bpmsuite-7.0.0.Beta01-execution-server-ee7.zip
 ENV BUSINESS_CENTRAL_DISTRIBUTION_ZIP_URL https://www.dropbox.com/sh/c13togkkp9fq80f/AAAUxLABzHz5rKu-nwni22RZa/jboss-bpmsuite-7.0.0.Beta01-business-central-eap7.zip?dl=1
-ENV KIE_EXECUTION_SERVER_ZIP_URL 
+ENV KIE_EXECUTION_SERVER_ZIP_URL https://www.dropbox.com/sh/c13togkkp9fq80f/AACEV-iwvRVq5w8-5DhonadIa/jboss-brms-bpmsuite-7.0.0.Beta01-execution-server-ee7.zip?dl=1
 
 USER jboss
 RUN curl -O -J -L $BUSINESS_CENTRAL_DISTRIBUTION_ZIP_URL \
